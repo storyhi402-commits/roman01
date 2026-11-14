@@ -1,3 +1,4 @@
+import { registerYoutube } from './youtube.js';
 import express from 'express';
 import { spawn } from 'node:child_process';
 import { promises as fs, createReadStream, createWriteStream } from 'node:fs';
@@ -158,3 +159,4 @@ app.post('/render', async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`railway-github-ffmpeg listening on :${PORT}`));
+registerYoutube(app);
