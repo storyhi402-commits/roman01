@@ -5,7 +5,7 @@ RUN apt-get update \
 WORKDIR /app
 COPY package.json ./
 RUN npm install --omit=dev
-COPY server.js ./
+COPY server.js youtube.js ./
 ENV NODE_ENV=production
 EXPOSE 8080
 CMD ["node", "server.js"]
